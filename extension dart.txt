@@ -1,0 +1,39 @@
+void main(){
+  
+  
+ String nome = 'ana';
+  print(nome.toFirstCharToUpperCase());
+  
+  
+  
+  
+  
+}
+
+// extension permite que eu crie novas propriedades para um objeto
+// nesse caso o objeto String
+
+// crio uma função dentro do extension que vai receber uma string
+// ele vai retornar a palavra com a primeira letra maiúscula
+
+//eu uso a propriedade 'this' para indicar que o objeto a ser mudado
+//será o que invocar essa nova propriedade do atual objeto String
+
+extension ExtensionString on String{
+  
+  String toFirstCharToUpperCase(){
+    
+    return this[0].toUpperCase()+this.substring(1);
+  }
+}
+
+// crio uma classe que vai ter uma função que recebe uma string
+// ele vai retornar a palavra com a primeira letra maiúscula
+/*class Utils{
+  
+  toFirstCharToUpperCase(String value){
+    
+    return value[0].toUpperCase()+value.substring(1);
+  }
+  
+}*/
